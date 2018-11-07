@@ -7,19 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="jQuery.js"></script>
     <script src="socket.io/socket.io.js"></script>
-    <script>
-        $(document).ready(function () {
-            alert("Hello Jquery!");
-        });
-
-        //Gọi lên server
-        var socket = io("http://localhost:3000");
-    </script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <h1>Hello world!</h1>
+    <div id = "wrapper">
+        <div id = "loginForm">
+            <h1>User Name</h1><br>
+            <input type="text"  id="txtUserName">
+            <input type="button" value="Register" id = "btnRegister">
+        </div>
+
+        <div id = "chatForm">
+            <div id = "left">
+                <div id="boxTitle">User Online</div>
+                <div id="boxContent"></div>
+            </div>
+
+            <div id = "right">
+                <div id="sayHi">
+                    Hello <span id = "currentUser">Teo</span>
+                    <input type="button" value="Logout" id = "btnLogout">
+                </div>
+                <div id="listMessage">
+
+                </div>
+                <div id = "typing"></div>
+                <input type="text" id="txtMesage">
+                <input type="button" value="Send" id="btnSendMessage">
+            </div>
+        </div>
+    </div>
+    
 </body>
 
 </html>
